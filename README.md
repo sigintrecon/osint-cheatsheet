@@ -37,7 +37,7 @@ Never investigate from your personal infrastructure. Follow the **Sock Puppet** 
 Deep dive into search engine manipulation to find exposed logs, credentials, and databases.
 * 👉 **[Read the Advanced Google Dorking Guide](google-dorking.md)**
 
-### 🛠️ 3. Technical & CLI OSINT Tools
+### 3. Technical & CLI OSINT Tools
 Automated workflows using command-line interface tools to extract subdomains, emails, and target data.
 * 👉 **[Read the CLI OSINT Tools & Configuration Guide](cli-osint-tools.md)**
 
