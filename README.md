@@ -1,4 +1,4 @@
-# OSINT Complete Reference & Cheatsheet 🎯
+# OSINT Complete Reference & Cheatsheet 
 
 ### Beginner to Advanced | Open Source Intelligence Framework
 **Maintained by: [SigintRecon](https://github.com/sigintrecon)**
