@@ -15,7 +15,7 @@ The Sherlock tool hunts down specific username handles across 350+ social networ
 ### Installation & System Setup
 ```bash
 # Clone the official source repository from GitHub
-git clone [https://github.com/sherlock-project/sherlock.git](https://github.com/sherlock-project/sherlock.git)
+git clone https://github.com/sherlock-project/sherlock
 cd sherlock
 
 # Install python dependencies required for concurrent requests
