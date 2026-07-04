@@ -41,7 +41,7 @@ All tools, frameworks, and techniques referenced in this repository are publicly
 - [General Data Protection Regulation (GDPR) — European Union](https://gdpr-info.eu/)
 - [Computer Misuse Act 1990 — United Kingdom](https://www.legislation.gov.uk/ukpga/1990/18/contents)
 
-> See [`LEGAL.md`](../LEGAL.md) for the full legal and ethical notice governing this repository.
+> See [`LEGAL.md`](https://github.com/sigintrecon/osint-cheatsheet/blob/main/legal.md) for the full legal and ethical notice governing this repository.
 
 ## Related Repositories
 
@@ -51,6 +51,6 @@ All tools, frameworks, and techniques referenced in this repository are publicly
 - [vuln-analysis-notes](https://github.com/sigintrecon/vuln-analysis-notes)
 
 ---
-**Back to:** [Main README](../README.md) · [Legal Notice](../LEGAL.md)
+**Back to:** [Main README](../README.md) · [Legal Notice](https://github.com/sigintrecon/osint-cheatsheet/blob/main/legal.md)
 
 *If you find a broken link or a claim that needs a stronger citation, open an issue or PR.*
