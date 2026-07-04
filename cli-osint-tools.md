@@ -8,7 +8,7 @@
 **Automated Footprinting & Command-Line Target Profiling**
 Part of the [OSINT Cheatsheet Series](https://github.com/sigintrecon/osint-cheatsheet) by [SigintRecon](https://github.com/sigintrecon)
 
-> ⚠️ Only run these tools against targets you are explicitly authorized to assess. See the [main legal notice](../README.md#-legal--ethical-warning).
+> ⚠️ Only run these tools against targets you are explicitly authorized to assess. See the [main legal notice](https://github.com/sigintrecon/osint-cheatsheet/blob/main/legal.md).
 
 Automating data collection prevents analyst fatigue, accelerates passive reconnaissance, and enables structured log extraction during red team engagements. Below are production workflows for industry-standard, open-source command-line intelligence tools.
 
