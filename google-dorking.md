@@ -6,7 +6,7 @@
 </p>
 
 **Open Source Intelligence & Search Engine Manipulation**
-Part of the [OSINT Cheatsheet Series](../README.md) by [SigintRecon](https://github.com/sigintrecon)
+Part of the [OSINT Cheatsheet Series](https://github.com/sigintrecon/osint-cheatsheet) by [SigintRecon](https://github.com/sigintrecon)
 
 > ⚠️ **Reminder:** Every dork in this guide is intended for **authorized reconnaissance** — bug bounty scope, sanctioned red team engagements, or your own infrastructure. Running these against unauthorized targets is illegal. See the [main legal notice](../README.md#-legal--ethical-warning).
 
@@ -88,4 +88,4 @@ filetype:log inurl:"error_log"
 ## Related Modules
 
 - [CLI OSINT Tools & Automation Workflows](cli-osint-tools.md)
-- [Back to Main README](../README.md)
+- [Back to Main README](https://github.com/sigintrecon/osint-cheatsheet/blob/main/README.md)
