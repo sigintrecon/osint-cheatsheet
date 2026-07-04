@@ -1,131 +1,127 @@
-# 🛠️ CLI OSINT Tools & Automation Workflows
+# OSINT Complete Reference & Cheatsheet
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Module-Technical%20OSINT-blue?style=flat-square" alt="Module">
-  <img src="https://img.shields.io/badge/Level-Intermediate-orange?style=flat-square" alt="Level">
+  <img src="https://img.shields.io/badge/Level-Beginner%20to%20Advanced-blue?style=flat-square" alt="Level">
+  <img src="https://img.shields.io/badge/Author-SigintRecon-black?style=flat-square" alt="Author">
+  <img src="https://img.shields.io/badge/Framework-Open%20Source%20Intelligence-orange?style=flat-square" alt="Framework">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="License">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square" alt="Status">
 </p>
 
-**Automated Footprinting & Command-Line Target Profiling**
-Part of the [OSINT Cheatsheet Series](../README.md) by [SigintRecon](https://github.com/sigintrecon)
+**Maintained by:** [SigintRecon](https://github.com/sigintrecon)
+**Scope:** Open Source Intelligence (OSINT) — structured methodology, tooling, and reference material for reconnaissance, digital forensics, and threat intelligence workflows.
 
-> ⚠️ Only run these tools against targets you are explicitly authorized to assess. See the [main legal notice](../README.md#-legal--ethical-warning).
+---
 
-Automating data collection prevents analyst fatigue, accelerates passive reconnaissance, and enables structured log extraction during red team engagements. Below are production workflows for industry-standard, open-source command-line intelligence tools.
+## ⚠️ Legal & Ethical Warning
+
+> This repository is built strictly for **educational purposes, authorized penetration testing, digital forensics, and threat intelligence**.
+>
+> Tracking, doxxing, or investigating individuals **without explicit consent** is illegal under Pakistan's **PECA 2016** (Prevention of Electronic Crimes Act) and applicable international cyber laws. Every technique documented here must only be applied within an authorized scope of engagement, a lawful investigation, or your own controlled lab environment.
+>
+> **Always operate ethically. Always operate within the law.**
+>
+> For the full legal notice — including relevant PECA provisions, international law considerations, and scope of use — see **[LEGAL.md](https://github.com/sigintrecon/osint-cheatsheet/blob/main/legal.md)**.
 
 ---
 
 ## Table of Contents
 
-- [Username Enumeration (Sherlock)](#1-username-enumeration-sherlock-framework)
-- [Email & Subdomain Harvesting (theHarvester)](#2-email--subdomain-harvesting-theharvester)
-- [Subdomain Discovery (Subfinder)](#3-subdomain-discovery-subfinder)
-- [Workflow Tips](#-workflow-tips)
+- [Repository Overview](#repository-overview)
+- [The OSINT Intelligence Cycle](https://github.com/sigintrecon/osint-cheatsheet/edit/main/README.md#the-osint-intelligence-cycle)
+- [Reference Modules](https://github.com/sigintrecon/osint-cheatsheet/edit/main/README.md#reference-modules-step-by-step-guides)
+- [Core OSINT Frameworks Quick Directory](https://github.com/sigintrecon/osint-cheatsheet/edit/main/README.md#core-osint-frameworks-quick-directory)
+- [Repository Structure](https://github.com/sigintrecon/osint-cheatsheet/edit/main/README.md#repository-structure)
+- [Connect & Support](#-connect--support)
 
 ---
 
-## 1. Username Enumeration (Sherlock Framework)
+## Repository Overview
 
-The **Sherlock** tool hunts down specific username handles across 350+ social networks and digital platforms simultaneously to map out a target's online presence.
-
-### Installation & System Setup
-
-```bash
-# Clone the official source repository from GitHub
-git clone https://github.com/sherlock-project/sherlock.git
-cd sherlock
-
-# Install python dependencies required for concurrent requests
-pip3 install -r requirements.txt
-```
-
-### Basic Usage
-
-```bash
-# Search for a single username across all supported platforms
-python3 sherlock.py target_username
-
-# Search multiple usernames in one run
-python3 sherlock.py username_one username_two
-
-# Save results to a specific output folder
-python3 sherlock.py target_username --output ./results/
-```
-
-### Notes
-
-- Sherlock only checks for the **existence** of an account tied to a username — it does not access private data or bypass authentication.
-- Cross-reference results manually; false positives can occur on platforms with generic "account not found" page structures.
+Welcome to the ultimate OSINT reference hub. This repository is structured into modular sections to help cybersecurity students, red teamers, and investigators navigate public data collection effectively — from foundational concepts to advanced, tool-driven workflows.
 
 ---
 
-## 2. Email & Subdomain Harvesting (theHarvester)
+## The OSINT Intelligence Cycle
 
-**theHarvester** aggregates emails, subdomains, hostnames, and employee names from public sources (search engines, PGP key servers, and certificate transparency logs).
+To produce actionable intelligence, follow this structured workflow:
 
-### Installation
+| Phase | Description | Example Action |
+|---|---|---|
+| **1. Requirements** | Defining what you need to find. | "Find all leaked corporate emails of target.com" |
+| **2. Collection** | Gathering raw data from public sources. | Running automated scrapers or Google Dorks. |
+| **3. Processing** | Organizing raw data into a readable format. | Cleaning duplicate data, sorting emails alphabetically. |
+| **4. Analysis** | Connecting the dots to find vulnerabilities. | Identifying that a specific developer leaks API keys. |
+| **5. Dissemination** | Presenting findings to stakeholders/clients. | Writing the final assessment/Red Team report. |
 
-```bash
-git clone https://github.com/laramies/theHarvester.git
-cd theHarvester
-pip3 install -r requirements/base.txt
-```
-
-### Basic Usage
-
-```bash
-# Harvest emails and subdomains for a target domain using Google as the source
-python3 theHarvester.py -d target.com -b google
-
-# Use multiple sources at once for broader coverage
-python3 theHarvester.py -d target.com -b google,bing,crtsh
-```
-
-### Notes
-
-- `-b all` queries every supported source but is slower and more likely to hit rate limits.
-- Certificate transparency logs (`crtsh`) are one of the highest-signal, lowest-noise sources for subdomain discovery.
+> 💡 **Why this matters:** Skipping straight to "collection" without defined requirements is the #1 mistake beginners make — it produces noise, not intelligence. Every phase after collection exists to turn raw data into something a decision-maker can act on.
 
 ---
 
-## 3. Subdomain Discovery (Subfinder)
+## Reference Modules (Step-by-Step Guides)
 
-**Subfinder** is a fast, passive subdomain enumeration tool that queries multiple public data sources without directly touching the target's infrastructure.
+### 1. Operational Security (OPSEC)
 
-### Installation
+Never investigate from your personal infrastructure. Follow the **Sock Puppet** rule:
 
-```bash
-git clone https://github.com/projectdiscovery/subfinder.git
-```
+- Use a hardened, privacy-tuned browser (Brave / Firefox).
+- Always route traffic via a trustworthy **VPN** or the **Tor Network**.
+- Separate your digital identity using dedicated **Virtual Machines** (e.g., CSI Linux).
 
-### Basic Usage
+### 2. Advanced Web Intelligence
 
-```bash
-# Enumerate subdomains for a target domain
-subfinder -d target.com
+Deep dive into search engine manipulation to find exposed logs, credentials, and databases.
+👉 [Read the Advanced Google Dorking Guide](https://github.com/sigintrecon/osint-cheatsheet/blob/main/google-dorking.md)
 
-# Save output to a file for further processing
-subfinder -d target.com -o subdomains.txt
+### 3. Technical & CLI OSINT Tools
 
-# Chain with httpx to check which discovered subdomains are live
-subfinder -d target.com | httpx -silent
-```
+Automated workflows using command-line interface tools to extract subdomains, emails, and target data.
+👉 [Read the CLI OSINT Tools & Configuration Guide](https://github.com/sigintrecon/osint-cheatsheet/blob/main/cli-osint-tools.md)
 
-### Notes
+### 4. Geolocation & Imagery OSINT
 
-- Being fully passive, Subfinder is a safe first step in any authorized recon workflow — it never sends probes directly to target-owned infrastructure.
-- Combine with `httpx` or `nmap` (from your `network-enum` repo) for active validation once subdomains are confirmed in scope.
+Analyzing visual data to locate physical coordinates:
 
----
-
-## Workflow Tips
-
-- **Automate, then verify.** CLI tools are excellent for speed, but every finding should be manually reviewed before it goes into a report.
-- **Rate-limit yourself.** Aggressive automated querying can trigger WAF/IDS alerts even during passive recon — pace your requests.
-- **Log everything.** Save raw tool output before processing/filtering it, so your evidence trail remains intact for the final report.
-- **Combine tools.** The real value comes from chaining: Subfinder → httpx → theHarvester → manual verification, not relying on any single tool in isolation.
+- **EXIF Data:** Extract hidden metadata using `exiftool target.jpg`.
+- **Visual Landmarks:** Analyze architecture, street signs, power poles, and vehicle registration plates to isolate geographic regions.
+- **Cross-referencing:** Validate imagery using Google Earth Pro satellite tracking.
 
 ---
 
-## Related Modules
+## Core OSINT Frameworks Quick Directory
 
-- [Advanced Google Dorking Reference Guide](google-dorking.md)
+| Source / Tool | Type | Core Utility |
+|---|---|---|
+| **[OSINT Framework](https://osintframework.com)** | Web Directory | Complete map of public OSINT resources. |
+| **IntelX / DeHashed** | Breach Database | Tracking leaked passwords, pastebins, and historic data breaches. |
+| **[HaveIBeenPwned](https://haveibeenpwned.com)** | Verification | Check if a target email has been compromised globally. |
+| **Maltego** | Desktop GUI | Graphical link analysis and entity relationship mapping. |
+
+---
+
+## Repository Structure
+
+```
+osint-reference-cheatsheet/
+├── README.md
+├── modules/
+│   ├── google-dorking.md        # Advanced search engine reconnaissance
+│   └── cli-osint-tools.md       # Automated CLI footprinting workflows
+└── references/
+    └── sources.md               # Consolidated citation list
+```
+
+---
+
+## Connect & Support
+
+- **GitHub Profile:** [github.com/sigintrecon](https://github.com/sigintrecon)
+- **TryHackMe:** [tryhackme.com/p/sigintrecon](https://tryhackme.com/p/sigintrecon)
+
+---
+
+Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
+
+<p align="center">
+  <sub>Built and maintained by <a href="https://github.com/sigintrecon">SigintRecon</a> — part of a structured path toward Red Team Operations.</sub>
+</p>
