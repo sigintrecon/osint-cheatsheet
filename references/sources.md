@@ -36,7 +36,7 @@ All tools, frameworks, and techniques referenced in this repository are publicly
 
 ## Legal References
 
-- [Prevention of Electronic Crimes Act (PECA) 2016 — Pakistan](https://www.pta.gov.pk/en/peca)
+- [Prevention of Electronic Crimes Act (PECA) 2016 — Pakistan](https://pakistancode.gov.pk/english/UY2FqaJw1-apaUY2Fqa-apaUY2Jvbp8%253D-sg-jjjjjjjjjjjjj)
 - [Computer Fraud and Abuse Act (CFAA) — United States](https://www.justice.gov/jm/jm-9-48000-computer-fraud)
 - [General Data Protection Regulation (GDPR) — European Union](https://gdpr-info.eu/)
 - [Computer Misuse Act 1990 — United Kingdom](https://www.legislation.gov.uk/ukpga/1990/18/contents)
@@ -46,7 +46,7 @@ All tools, frameworks, and techniques referenced in this repository are publicly
 ## Related Repositories
 
 - [malware-threats-analysis](https://github.com/sigintrecon/malware-threats-analysis)
-- [network-enum](https://github.com/sigintrecon/network-enum)
+- [network-enum](https://github.com/sigintrecon/nmap-cheatsheet)
 - [privilege-escalation-lab](https://github.com/sigintrecon/privilege-escalation-lab)
 - [vuln-analysis-notes](https://github.com/sigintrecon/vuln-analysis-notes)
 
