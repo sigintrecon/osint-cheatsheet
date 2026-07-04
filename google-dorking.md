@@ -1,4 +1,4 @@
-# 🔍 Advanced Google Dorking Reference Guide
+# Advanced Google Dorking Reference Guide
 
 <p align="left">
   <img src="https://img.shields.io/badge/Module-Web%20Intelligence-blue?style=flat-square" alt="Module">
@@ -8,7 +8,7 @@
 **Open Source Intelligence & Search Engine Manipulation**
 Part of the [OSINT Cheatsheet Series](https://github.com/sigintrecon/osint-cheatsheet) by [SigintRecon](https://github.com/sigintrecon)
 
-> ⚠️ **Reminder:** Every dork in this guide is intended for **authorized reconnaissance** — bug bounty scope, sanctioned red team engagements, or your own infrastructure. Running these against unauthorized targets is illegal. See the [main legal notice](../README.md#-legal--ethical-warning).
+> ⚠️ **Reminder:** Every dork in this guide is intended for **authorized reconnaissance** — bug bounty scope, sanctioned red team engagements, or your own infrastructure. Running these against unauthorized targets is illegal. See the [main legal notice](https://github.com/sigintrecon/osint-cheatsheet/blob/main/legal.md).
 
 Google Dorking (also known as Google Hacking) involves using advanced search operators to filter through Google's massive index to uncover security misconfigurations, exposed sensitive files, credentials, and open administration panels that should never have been publicly accessible.
 
