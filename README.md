@@ -32,7 +32,7 @@
 - [Reference Modules](https://github.com/sigintrecon/osint-cheatsheet/edit/main/README.md#reference-modules-step-by-step-guides)
 - [Core OSINT Frameworks Quick Directory](https://github.com/sigintrecon/osint-cheatsheet/edit/main/README.md#core-osint-frameworks-quick-directory)
 - [Repository Structure](https://github.com/sigintrecon/osint-cheatsheet/edit/main/README.md#repository-structure)
-- [Connect & Support](#-connect--support)
+- [Connect & Support](https://github.com/sigintrecon/osint-cheatsheet/edit/main/README.md#connect--support)
 
 ---
 
@@ -116,11 +116,10 @@ osint-reference-cheatsheet/
 ## Connect & Support
 
 - **GitHub Profile:** [github.com/sigintrecon](https://github.com/sigintrecon)
-- **TryHackMe:** [tryhackme.com/p/sigintrecon](https://tryhackme.com/p/sigintrecon)
 
 ---
 
-Distributed under the **MIT License**. See [LICENSE](LICENSE) for details.
+Distributed under the **MIT License**. See [LICENSE](https://github.com/sigintrecon/osint-cheatsheet/blob/main/LICENSE) for details.
 
 <p align="center">
   <sub>Built and maintained by <a href="https://github.com/sigintrecon">SigintRecon</a> — part of a structured path toward Red Team Operations.</sub>
